@@ -66,7 +66,7 @@
   {value}
   fallbackLabel={displayValue}
   {placeholder}
-  inputAttributes={{ "data-1p-ignore": "true" }}
+  inputAttributes={{ "data-1p-ignore": "true", "data-bwignore": "true" }}
   {title}
   {emptyLabel}
   {allowCustom}
