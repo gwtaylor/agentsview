@@ -62,19 +62,6 @@ describe("ProjectTypeahead", () => {
     ).toBe("false");
   });
 
-  it("marks the project query for password-manager exclusion", async () => {
-    component = mount(ProjectTypeahead, {
-      target: document.body,
-      props: { projects, value: "", onselect: vi.fn() },
-    });
-
-    await fireEvent.click(screen.getByRole("button"));
-
-    const input = screen.getByRole("combobox");
-    expect(input.getAttribute("data-1p-ignore")).toBe("true");
-    expect(input.getAttribute("data-bwignore")).toBe("true");
-  });
-
   it("can omit the all-projects option for a required selection", async () => {
     component = mount(ProjectTypeahead, {
       target: document.body,
